@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="573.0" prefWidth="755.0" style="-fx-background-color: B0A2FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportFormController">
+   <children>
+      <Label alignment="CENTER" prefHeight="72.0" prefWidth="755.0" style="-fx-background-color: Black;" text="Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="46.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="27.0" layoutY="83.0" onAction="#btnBackOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="635.0" layoutY="524.0" onAction="#btnPrintReportOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Print" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="418.0" layoutY="83.0" onAction="#btnDailyOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Daily" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="528.0" layoutY="83.0" onAction="#btnMonthlyOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Monthly" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="641.0" layoutY="83.0" onAction="#btnAnnuallyOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Annually" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <PieChart fx:id="salesChart" layoutX="90.0" layoutY="124.0" prefHeight="387.0" prefWidth="509.0" />
+   </children>
+</AnchorPane>

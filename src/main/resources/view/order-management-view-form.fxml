@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="573.0" prefWidth="755.0" style="-fx-background-color: B0A2FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderManagementFormController">
+   <children>
+      <Label alignment="CENTER" prefHeight="72.0" prefWidth="755.0" style="-fx-background-color: Black;" text="Order Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="46.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="27.0" layoutY="83.0" onAction="#btnBackOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtPrice" focusColor="#2200ff" layoutX="281.0" layoutY="139.0" prefHeight="26.0" prefWidth="156.0" promptText="Price" style="-fx-background-color: #ffffff8b;" unFocusColor="BLACK">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </JFXTextField>
+      <JFXButton layoutX="584.0" layoutY="234.0" onAction="#btnAddToCartOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Add to cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblItemCart" layoutX="32.0" layoutY="280.0" prefHeight="238.0" prefWidth="662.0">
+        <columns>
+          <TableColumn fx:id="colProductId" prefWidth="72.79999542236328" text="Product ID" />
+          <TableColumn fx:id="colUserId" prefWidth="92.79999542236328" text="User ID" />
+            <TableColumn fx:id="colDescription" prefWidth="140.0" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="68.79998779296875" text="QTY" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="89.60003662109375" text="Unit Price" />
+            <TableColumn fx:id="colSize" prefWidth="101.60000610351562" text="Size" />
+            <TableColumn fx:id="colTotal" prefWidth="94.39999999999998" text="Total" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtDescription" focusColor="#2200ff" layoutX="473.0" layoutY="139.0" prefHeight="26.0" prefWidth="174.0" promptText="Description" style="-fx-background-color: #ffffff8b;" unFocusColor="BLACK">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStock" focusColor="#2200ff" layoutX="473.0" layoutY="179.0" prefHeight="26.0" prefWidth="71.0" promptText="Stock" style="-fx-background-color: #ffffff8b;" unFocusColor="BLACK">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQty" focusColor="#2200ff" layoutX="576.0" layoutY="179.0" prefHeight="26.0" prefWidth="71.0" promptText="QTY" style="-fx-background-color: #ffffff8b;" unFocusColor="BLACK">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </JFXTextField>
+      <JFXButton layoutX="598.0" layoutY="532.0" onAction="#btnPlaceOrderOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="42.0" layoutY="537.0" prefHeight="26.0" prefWidth="90.0" text="Net Total  :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" layoutX="132.0" layoutY="537.0" prefHeight="26.0" prefWidth="90.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="612.0" layoutY="83.0" onAction="#btnOrderHistoryOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Order History" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="comboProductID" layoutX="97.0" layoutY="140.0" prefHeight="26.0" prefWidth="156.0" promptText="Product ID" style="-fx-background-color: #ffffff8b; colName.setCellValueFactory(new PropertyValueFactory&lt;&gt;(&quot;name&quot;)): ; colCompany.setCellValueFactory(new PropertyValueFactory&lt;&gt;(&quot;company&quot;)): ; colEmail.setCellValueFactory(new PropertyValueFactory&lt;&gt;(&quot;email&quot;)): ;">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </JFXComboBox>
+      <JFXComboBox fx:id="comboSize" layoutX="281.0" layoutY="179.0" prefHeight="26.0" prefWidth="156.0" promptText="Size" style="-fx-background-color: #ffffff8b; colName.setCellValueFactory(new PropertyValueFactory&lt;&gt;(&quot;name&quot;)): ; colCompany.setCellValueFactory(new PropertyValueFactory&lt;&gt;(&quot;company&quot;)): ; colEmail.setCellValueFactory(new PropertyValueFactory&lt;&gt;(&quot;email&quot;)): ;">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </JFXComboBox>
+      <JFXButton layoutX="310.0" layoutY="532.0" onAction="#btnClearCartOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Clear Cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="460.0" layoutY="532.0" onAction="#btnRemoveRowOnAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0e0e42;" text="Remove Row" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
